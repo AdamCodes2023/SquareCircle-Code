@@ -51,3 +51,23 @@ for (let i = 0; i < 90; i++) {
   // draw it
   drawLines(finalLines);
 }
+
+finalLines.pop();
+
+const downRightTriangle = [
+  [105, 20],
+  [110, 10],
+  [115, 20],
+  [105, 20]
+];
+
+// add the polyline to the final lines
+finalLines.push(downRightTriangle);
+
+for (let i = 0; i < 90; i++) {
+  // transform lines using the toolkit
+  bt.rotate(finalLines, 1);
+
+  // draw it
+  drawLines(finalLines);
+}
