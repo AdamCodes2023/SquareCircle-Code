@@ -131,3 +131,9 @@ for (let i = 0; i < 90; i++) {
   // draw it
   drawLines(finalLines);
 }
+
+finalLines.pop();
+
+const curve = bt.catmullRom([[0, bt.randIntInRange(20, 100)], [20, bt.randIntInRange(20, 100)], [40, bt.randIntInRange(20, 100)], [60, bt.randIntInRange(20, 100)], [80, bt.randIntInRange(20, 100)], [100, bt.randIntInRange(20, 100)], [125, bt.randIntInRange(20, 100)]])
+
+drawLines([curve])
