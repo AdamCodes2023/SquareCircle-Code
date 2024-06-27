@@ -111,3 +111,23 @@ for (let i = 0; i < 90; i++) {
   // draw it
   drawLines(finalLines);
 }
+
+finalLines.pop();
+
+const CenterTriangle = [
+  [(width/2) + 5, (height/2)-5],
+  [(width/2), (height/2)+5],
+  [(width/2) - 5, (height/2)-5],
+  [(width/2) + 5, (height/2)-5]
+];
+
+// add the polyline to the final lines
+finalLines.push(CenterTriangle);
+
+for (let i = 0; i < 90; i++) {
+  // transform lines using the toolkit
+  bt.rotate(finalLines, 1);
+
+  // draw it
+  drawLines(finalLines);
+}
